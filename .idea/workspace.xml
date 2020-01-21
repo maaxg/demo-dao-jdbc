@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="748bfba1-976b-4c32-9359-be52945500a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/entities/Seller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/DepartmentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/SellerDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -39,6 +39,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/banco" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -87,7 +93,7 @@
       <updated>1579558543735</updated>
       <workItem from="1579558548429" duration="484000" />
       <workItem from="1579613782427" duration="156000" />
-      <workItem from="1579614030831" duration="1599000" />
+      <workItem from="1579614030831" duration="1946000" />
     </task>
     <servers />
   </component>
@@ -103,22 +109,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="389" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579558672619" />
-    <state width="516" height="176" key="GridCell.Tab.0.bottom" timestamp="1579615693512">
+    <state width="516" height="176" key="GridCell.Tab.0.bottom" timestamp="1579615756245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="516" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579615693512" />
-    <state width="516" height="176" key="GridCell.Tab.0.center" timestamp="1579615693511">
+    <state width="516" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579615756245" />
+    <state width="516" height="176" key="GridCell.Tab.0.center" timestamp="1579615756245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="516" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579615693511" />
-    <state width="516" height="176" key="GridCell.Tab.0.left" timestamp="1579615693511">
+    <state width="516" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579615756245" />
+    <state width="516" height="176" key="GridCell.Tab.0.left" timestamp="1579615756245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="516" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579615693511" />
-    <state width="516" height="176" key="GridCell.Tab.0.right" timestamp="1579615693511">
+    <state width="516" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579615756245" />
+    <state width="516" height="176" key="GridCell.Tab.0.right" timestamp="1579615756245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="516" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579615693511" />
+    <state width="516" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579615756245" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1579558681318">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
