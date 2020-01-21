@@ -48,20 +48,10 @@ public class SellerDaoJDBC implements SellerDao {
 
             stmt.setInt(1, id);
             rs = stmt.executeQuery();
+            //Se esse proximo resultset no caso o de valor 1 existir
             if(rs.next()){
-                //Se esse proximo resultset no caso o de valor 1 existir
-                Department dep = new Department();
-                /*Objeto department montado*/
-                dep.setId(rs.getInt("DepartmentId"));
-                dep.setName(rs.getString("DepName"));
-                Seller obj = new Seller();
-                obj.setId(rs.getInt("Id"));
-                obj.setName(rs.getString("Name"));
-                obj.setEmail(rs.getString("Email"));
-                obj.setBaseSalary(rs.getDouble("BaseSalary"));
-                obj.setBirthDate(rs.getDate("BirthDate"));
-                //passagem do department montado para o objeto
-                obj.setDepartment(dep);
+                Department dep = instantiateDepartment(rs);
+                Seller obj = intstantiateSeller(rs, dep);
                 return obj;
             }
             return null;
@@ -71,6 +61,26 @@ public class SellerDaoJDBC implements SellerDao {
         }finally {
             DB.closeConnection(stmt, rs);
         }
+    }
+
+    private Seller intstantiateSeller(ResultSet rs, Department dep) throws SQLException {
+        Seller obj = new Seller();
+        obj.setId(rs.getInt("Id"));
+        obj.setName(rs.getString("Name"));
+        obj.setEmail(rs.getString("Email"));
+        obj.setBaseSalary(rs.getDouble("BaseSalary"));
+        obj.setBirthDate(rs.getDate("BirthDate"));
+        //passagem do department montado para o objeto
+        obj.setDepartment(dep);
+        return obj;
+    }
+
+    private Department instantiateDepartment(ResultSet rs) throws SQLException {
+        Department dep = new Department();
+        /*Objeto department montado*/
+        dep.setId(rs.getInt("DepartmentId"));
+        dep.setName(rs.getString("DepName"));
+        return dep;
     }
 
     @Override
