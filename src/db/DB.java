@@ -32,7 +32,6 @@ public class DB {
         }
     }
     public static void closeConnection(Statement stmt){
-        closeConnection();
         if(stmt != null){
             try{
                 stmt.close();
