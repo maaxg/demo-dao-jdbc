@@ -56,11 +56,52 @@ public class SellerDaoJDBC implements SellerDao {
 
     @Override
     public void update(Seller obj) {
+        PreparedStatement stmt = null;
+        try {
+            String sql = "UPDATE seller " +
+                    "SET Name = ?, Email = ?, BirthDate = ?, BaseSalary = ?, DepartmentId = ? " +
+                    "WHERE Id = ?";              //Para retornar o ID criado
+            stmt = conn.prepareStatement(sql);
 
+            stmt.setString(1, obj.getName());
+            stmt.setString(2, obj.getEmail());
+            stmt.setDate(3, new java.sql.Date(obj.getBirthDate().getTime()));
+            stmt.setDouble(4, obj.getBaseSalary());
+            stmt.setInt(5, obj.getDepartment().getId());
+            stmt.setInt(6, obj.getId());
+
+            stmt.executeUpdate();
+
+        }catch (SQLException ex){
+            throw new DbException(ex.getMessage());
+        }finally {
+            DB.closeConnection(stmt);
+        }
     }
+
 
     @Override
     public void deleteById(Integer id) {
+        PreparedStatement stmt = null;
+        try{
+            String sql = "DELETE FROM seller\n" +
+                    "WHERE Id = ?";
+            stmt = conn.prepareStatement(sql);
+
+            stmt.setInt(1, id);
+
+            int rows = stmt.executeUpdate();
+
+            if(rows == 0){
+                throw new DbException("Id don't exists");
+            }
+
+
+        }catch (SQLException ex){
+            throw new DbException(ex.getMessage());
+        }finally {
+            DB.closeConnection(stmt);
+        }
 
     }
 
