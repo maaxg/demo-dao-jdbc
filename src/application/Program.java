@@ -39,7 +39,6 @@ public class Program {
         seller = sellerDao.findById(1);
         seller.setName("Martha Wayne");
         sellerDao.update(seller);
-        sellerDao.insert(newSeller);
 
         System.out.println("Update Completed!");
 
