@@ -40,6 +40,15 @@ public class DB {
             }
         }
     }
+    public static void closeConnection(ResultSet rs){
+        if(rs != null){
+            try{
+                rs.close();
+            }catch (SQLException ex){
+                throw new DbException(ex.getMessage());
+            }
+        }
+    }
     public static void closeConnection(Statement stmt, ResultSet rs){
         closeConnection(stmt);
         if(rs != null){
